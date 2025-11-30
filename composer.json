@@ -8,6 +8,11 @@
       "Au9500\\LaravelBigDecimalCast\\": "src/"
     }
   },
+  "autoload-dev": {
+    "psr-4": {
+      "Au9500\\LaravelBigDecimalCast\\Tests\\": "tests/"
+    }
+  },
   "authors": [
     {
       "name": "Andreas Uretschnig"
@@ -22,7 +27,9 @@
   },
   "require-dev": {
     "laravel/sail": "^1.48",
-    "laravel/pint": "^1.26"
+    "laravel/pint": "^1.26",
+    "phpunit/phpunit": "^12.4",
+    "orchestra/testbench": "^10.8"
   },
   "extra": {
     "laravel": {

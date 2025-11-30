@@ -4,3 +4,4 @@
 /package-lock.json
 /start.sh
 /.env
+/.phpunit.result.cache
