@@ -1,0 +1,34 @@
+{
+  "name": "au9500/laravel-big-decimal-cast",
+  "description": "Custom Brick/Math BigDecimal cast for Laravel Eloquent.",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Au9500\\LaravelBigDecimalCast\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Andreas Uretschnig"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": "^8.2",
+    "illuminate/support": "^10.0|^11.0|^12.0",
+    "brick/math": "^0.13.1",
+    "illuminate/database": "^12.40"
+  },
+  "require-dev": {
+    "laravel/sail": "^1.48",
+    "laravel/pint": "^1.26"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Au9500\\LaravelBigDecimalCast\\LaravelBigDecimalCastServiceProvider"
+      ]
+    }
+  }
+}
