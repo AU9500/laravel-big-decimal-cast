@@ -9,7 +9,7 @@ use Brick\Math\RoundingMode;
 
 class BigDecimalCastTest extends TestCase
 {
-    public function testCastsStoredValuesToBigDecimal(): void
+    public function test_casts_stored_values_to_big_decimal(): void
     {
         $model = FakeModel::create(['value' => '12.3456']);
         $model->refresh();
@@ -19,7 +19,7 @@ class BigDecimalCastTest extends TestCase
         $this->assertSame('12.35', (string) $model->value);
     }
 
-    public function testAppliesScaleAndRoundingModeOnSave(): void
+    public function test_applies_scale_and_rounding_mode_on_save(): void
     {
         config(['laravel-big-decimal-cast.scale' => 2]);
         config(['laravel-big-decimal-cast.rounding_mode' => RoundingMode::HALF_UP]);
@@ -31,7 +31,7 @@ class BigDecimalCastTest extends TestCase
         $this->assertSame('12.35', $model->value->__toString());
     }
 
-    public function testHandlesNullValues(): void
+    public function test_handles_null_values(): void
     {
         $model = FakeModel::create(['value' => null]);
         $model->refresh();
@@ -41,9 +41,9 @@ class BigDecimalCastTest extends TestCase
         $this->assertSame('0.00', (string) $model->value);
     }
 
-    public function testAcceptsNumbersStringsAndBigDecimalInstances(): void
+    public function test_accepts_numbers_strings_and_big_decimal_instances(): void
     {
-        $model = new FakeModel();
+        $model = new FakeModel;
 
         // number
         $model->value = 10.5;
@@ -70,7 +70,7 @@ class BigDecimalCastTest extends TestCase
         $this->assertSame('3.14', (string) $model->value);
     }
 
-    public function testUsesConfiguredScaleAndRoundingMode(): void
+    public function test_uses_configured_scale_and_rounding_mode(): void
     {
         config(['laravel-big-decimal-cast.scale' => 3]);
         config(['laravel-big-decimal-cast.rounding_mode' => RoundingMode::DOWN]);

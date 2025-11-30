@@ -9,8 +9,6 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class FakeModel
- *
- * @package Au9500\LaravelBigDecimalCast\Tests
  */
 class FakeModel extends Model
 {

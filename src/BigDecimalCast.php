@@ -12,8 +12,6 @@ use Illuminate\Support\Facades\Config;
 
 /**
  * Class BigDecimalCast
- *
- * @package Au9500\LaravelBigDecimalCast
  */
 class BigDecimalCast implements CastsAttributes
 {

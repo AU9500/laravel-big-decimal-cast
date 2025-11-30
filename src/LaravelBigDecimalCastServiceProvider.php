@@ -8,14 +8,9 @@ use Illuminate\Support\ServiceProvider;
 
 /**
  * Class LaravelBigDecimalCastServiceProvider
- *
- * @package Au9500\LaravelBigDecimalCast
  */
 class LaravelBigDecimalCastServiceProvider extends ServiceProvider
 {
-    /**
-     * @return void
-     */
     public function register(): void
     {
         $this->mergeConfigFrom(
@@ -24,9 +19,6 @@ class LaravelBigDecimalCastServiceProvider extends ServiceProvider
         );
     }
 
-    /**
-     * @return void
-     */
     public function boot(): void
     {
         $this->publishes([
@@ -34,9 +26,6 @@ class LaravelBigDecimalCastServiceProvider extends ServiceProvider
         ], 'laravel-big-decimal-cast-config');
     }
 
-    /**
-     * @return string
-     */
     protected function getConfigPath(): string
     {
         if (function_exists('config_path')) {
