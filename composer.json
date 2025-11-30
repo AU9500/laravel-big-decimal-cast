@@ -22,7 +22,7 @@
   "require": {
     "php": "^8.2",
     "illuminate/support": "^10.0|^11.0|^12.0",
-    "brick/math": "^0.13.1",
+    "brick/math": "^0.14",
     "illuminate/database": "^12.40"
   },
   "require-dev": {
