@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Au9500\LaravelBigDecimalCast\Tests;
 
+use Au9500\LaravelBigDecimalCast\Tests\Stubs\FakeModel;
 use Brick\Math\BigDecimal;
 use Brick\Math\RoundingMode;
 
@@ -21,8 +22,8 @@ class BigDecimalCastTest extends TestCase
 
     public function test_applies_scale_and_rounding_mode_on_save(): void
     {
-        config(['laravel-big-decimal-cast.scale' => 2]);
-        config(['laravel-big-decimal-cast.rounding_mode' => RoundingMode::HALF_UP]);
+        config(['big-decimal-cast.scale' => 2]);
+        config(['big-decimal-cast.rounding_mode' => RoundingMode::HALF_UP]);
 
         $model = FakeModel::create(['value' => '12.3456']);
         $model->refresh();
@@ -72,8 +73,8 @@ class BigDecimalCastTest extends TestCase
 
     public function test_uses_configured_scale_and_rounding_mode(): void
     {
-        config(['laravel-big-decimal-cast.scale' => 3]);
-        config(['laravel-big-decimal-cast.rounding_mode' => RoundingMode::DOWN]);
+        config(['big-decimal-cast.scale' => 3]);
+        config(['big-decimal-cast.rounding_mode' => RoundingMode::DOWN]);
 
         $model = FakeModel::create(['value' => '9.87654']);
         $model->refresh();

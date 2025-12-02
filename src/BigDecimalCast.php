@@ -36,8 +36,8 @@ class BigDecimalCast implements CastsAttributes
             ? $value
             : BigDecimal::of($value ?? 0);
 
-        $scale = (int) Config::get('laravel-big-decimal-cast.scale', 2);
-        $roundingMode = Config::get('laravel-big-decimal-cast.rounding_mode', RoundingMode::HALF_UP);
+        $scale = (int) Config::get('big-decimal-cast.scale', 2);
+        $roundingMode = Config::get('big-decimal-cast.rounding_mode', RoundingMode::HALF_UP);
 
         return $bigDecimal
             ->toScale($scale, $roundingMode)

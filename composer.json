@@ -34,7 +34,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Au9500\\LaravelBigDecimalCast\\LaravelBigDecimalCastServiceProvider"
+        "Au9500\\LaravelBigDecimalCast\\BigDecimalCastServiceProvider"
       ]
     }
   }

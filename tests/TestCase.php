@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Au9500\LaravelBigDecimalCast\Tests;
 
-use Au9500\LaravelBigDecimalCast\LaravelBigDecimalCastServiceProvider;
+use Au9500\LaravelBigDecimalCast\BigDecimalCastServiceProvider;
 use Brick\Math\RoundingMode;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -15,7 +15,7 @@ abstract class TestCase extends Orchestra
     protected function getPackageProviders($app): array
     {
         return [
-            LaravelBigDecimalCastServiceProvider::class,
+            BigDecimalCastServiceProvider::class,
         ];
     }
 
@@ -30,8 +30,8 @@ abstract class TestCase extends Orchestra
         ]);
 
         // Default config
-        $app['config']->set('laravel-big-decimal-cast.scale', 2);
-        $app['config']->set('laravel-big-decimal-cast.rounding_mode', RoundingMode::HALF_UP);
+        $app['config']->set('big-decimal-cast.scale', 2);
+        $app['config']->set('big-decimal-cast.rounding_mode', RoundingMode::HALF_UP);
     }
 
     protected function setUp(): void

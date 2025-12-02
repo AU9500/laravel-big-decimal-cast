@@ -49,11 +49,11 @@ For development, you can load the package via a local path repository inside you
 
 Publish the configuration file:
 
-    php artisan vendor:publish --tag=laravel-big-decimal-cast-config
+    php artisan vendor:publish --tag=big-decimal-cast-config
 
 This will create:
 
-config/laravel-big-decimal-cast.php
+config/big-decimal-cast.php
 
     <?php
 
@@ -78,8 +78,8 @@ Now all casts will store values with 4 decimal places.
 
 ### Casting on save:
 
-    $scale = Config::get('laravel-big-decimal-cast.scale', 2);
-    $roundingMode = Config::get('laravel-big-decimal-cast.rounding_mode', RoundingMode::HALF_UP);
+    $scale = Config::get('big-decimal-cast.scale', 2);
+    $roundingMode = Config::get('big-decimal-cast.rounding_mode', RoundingMode::HALF_UP);
 
     return $bigDecimal->toScale($scale, $roundingMode)->__toString();
 

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Au9500\LaravelBigDecimalCast\Tests;
+namespace Au9500\LaravelBigDecimalCast\Tests\Stubs;
 
 use Au9500\LaravelBigDecimalCast\BigDecimalCast;
 use Illuminate\Database\Eloquent\Model;
